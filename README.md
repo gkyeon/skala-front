@@ -47,11 +47,26 @@ skala-front/
 
 ## ✅ 주요 과제 요구사항 구현
 
-| 단계 | 내용 | 파일 |
+<details>
+<summary>📝 2. HTML 기초</summary>
+
+| 미션 | 내용 | 파일 |
 |---|---|---|
-| DOM 조작 | `<select>` 도시 선택 → `innerHTML`로 좌표/정보 출력 | `index.html`, `realtimeInfo.js` |
-| 비동기 호출 | `fetch()` + `async/await`로 Open-Meteo API 실시간 온도/습도 조회 | `weatherAPI.js` |
-| 모듈 분리 | 데이터 로직(`weatherAPI.js`)과 화면 로직(`realtimeInfo.js`) 분리, `export`/`import` 사용 | `script/` 전체 |
+| 나의 소개 | `<ul>`(좋아하는 음식), `<ol>`(올 해 할 일), `<dl>`(나를 설명하는 단어들) 태그 활용해 자기소개 페이지 작성 (CSS 미적용) | `html/myProfile.html` |
+| 나의 강의 일정 | `<table>`, `<thead>`, `<tbody>` 태그로 시간표 작성, `<td>`에 `rowspan`으로 2시간 이상 강의·점심시간 셀 합치기 (CSS 미적용) | `html/myClass.html` |
+| 바로가기 | `<a>` 태그로 수업/휴일/프로필 페이지 이동하는 바로가기 메뉴를 `index.html`에 추가 (CSS 미적용) | `html/index.html` |
+
+</details>
+
+<details>
+<summary>📋 3. HTML Form</summary>
+
+| 미션 | 내용 | 파일 |
+|---|---|---|
+| 회원가입 | `<form>`(action="signUpResult.html", method="get"), `<fieldset><legend><label>` 그룹핑, `<input>`(placeholder/required), `<select><option>`, `<textarea>`, `<submit><reset>` 등 폼 요소 종합 활용 | `html/signUp.html` |
+| 회원가입결과 | 회원가입 폼 제출 시 `signUpResult.html`로 이동해 완료 안내 메시지와 다른 페이지로 이동하는 링크 제공 | `html/signUpResult.html` |
+
+</details>
 
 <details>
 <summary>📄 4. HTML 심화</summary>
