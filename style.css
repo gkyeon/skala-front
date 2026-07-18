@@ -1,0 +1,634 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
+
+
+
+:root {
+  --color-point: #fa9ebc;        /* 포인트 컬러 - 제목, 강조 요소 */
+  --color-point-rgb: 250, 158, 188;
+
+  --color-highlight: #f4d1ff;    /* 하이라이트 컬러 - 배경, 테두리 */
+  --color-highlight-rgb: 244, 209, 255;
+
+  --color-base: #0b1957;         /* 베이스 컬러 - 본문 텍스트, 진한 배경 */
+  --color-base-rgb: 11, 25, 87;
+
+  --color-action: #5784e6;       /* 액션 컬러 - 링크, 버튼, 클릭 요소 */
+  --color-action-rgb: 87, 132, 230;
+}
+
+/* ================================
+   1단계: 전체 테마 - 폰트 & 배경
+   ================================ */
+
+
+body {
+  font-family: 'Orbit', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--color-base);
+  background-color: #fefefb;   /* 린넨 */
+}
+
+/* ================================
+   2단계: 제목(h1, h2) 꾸미기
+   ================================ */
+
+
+h1 {
+  font-family: "Grandiflora One", cursive;
+  color: #000000;
+  font-weight: 400;
+  font-size: 2.2em;
+  padding: 12px 20px;
+  border-bottom: 1px dashed #b0b0b0; /*점선*/
+}
+
+
+/* h3 {
+  color: var(--color-base);
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 8px 16px;
+  border-left: 6px solid var(--color-point);
+  background-color: rgba(var(--color-point-rgb), 0.3);
+} */
+
+hr {
+    border: none;
+    border-top: 1px solid #b0b0b0;
+}
+/* ================================
+   3단계: 링크(a 태그) 스타일링
+   ================================ */
+
+a {
+  color: var(--color-action);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-base);
+  text-decoration: underline;
+}
+
+/* ================================
+   4단계: 박스 모델 - container
+   ================================ */
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: rgba(var(--color-highlight-rgb), 0.1);
+  border-radius: 20px;
+}
+
+/* ================================
+   5단계: myTrip.html - 리뷰 카드
+   ================================ */
+
+.trip-card {
+  background-color: rgba(var(--color-point-rgb), 0.1);
+  border: 2px solid var(--color-point);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin: 20px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(var(--color-base-rgb), 0.2);
+}
+
+.trip-card figcaption {
+  font-weight: bold;
+  color: var(--color-point);
+  margin-top: 8px;
+}
+
+
+/* 브이로그도 스타일 통일 */
+.vlog-card {
+  background-color: rgba(var(--color-point-rgb), 0.1);
+  border: 2px solid var(--color-point);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-top: 20px;
+}
+
+.vlog-card video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  display: block;
+  margin: 12px 0;
+}
+
+.vlog-card p{
+  font-style: italic;
+  color: rgba(var(--color-base-rgb), 0.7);
+}
+
+
+/* 브이로그 보러가기 링크 버튼 스타일링 */
+.btn-link {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: var(--color-action);
+  color: var(--color-point);
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: filter 0.3s ease;
+}
+
+
+.vlog-card a:hover {
+  filter: brightness(0.85);
+}
+
+
+/* 오디오 스타일링 */
+audio {
+  width: 100%;
+  border-radius: 30px;
+  accent-color: var(--color-point);   /* 재생바/볼륨 색상 톤 변경 */
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: rgba(var(--color-point-rgb), 0.5);
+}
+
+
+
+
+/* ================================
+   6단계: myClass.html - 테이블
+   ================================ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid var(--color-highlight);
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+th {
+  background-color: var(--color-base);
+  color: var(--color-highlight);   /* 진한 배경 위 밝은 텍스트 (흰색 대신 하이라이트 컬러 사용) */
+  font-size: 1.05em;
+}
+
+
+
+tbody td {
+  background-color: rgba(var(--color-highlight-rgb), 0.05);
+}
+
+
+
+/* 시간표 칸 마우스 올리면 색상 반응 */
+tbody td:hover {
+  background-color: rgba(var(--color-point-rgb), 0.35);
+  cursor: pointer;
+}
+
+/* ================================
+   7단계: 회원가입 폼 스타일링
+   ================================ */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1em;
+  font-family: 'Orbit', sans-serif;
+  border: 1px solid var(--color-highlight);
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  color: var(--color-base);
+}
+
+
+/* 입력시 효과 스타일링 */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-point);
+  box-shadow: 0 0 0 2px rgba(var(--color-highlight-rgb), 0.8);
+  transform: scale(1.01);}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+
+
+
+
+fieldset {
+  border: 2px solid var(--color-point);
+  background-color: rgba(var(--color-point-rgb), 0.15);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* 들여쓰기 스타일링 */
+.checkbox-item {
+  display: inline-block;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.checkbox-item input[type="checkbox"] {
+  transition: transform 0.2s ease;
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+  transform: scale(1.2);
+}
+
+
+legend {
+  padding: 4px 12px;
+  color: var(--color-point);
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  font-family: 'Orbit', sans-serif;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+  transition: filter 0.3s ease;   /* 색을 새로 안 만들고 밝기 조절로만 hover 표현 */
+}
+
+button[type="submit"],
+input[type="submit"] {
+  background-color: var(--color-action);
+  color: var(--color-highlight);
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+  filter: brightness(0.85);
+}
+
+button[type="reset"],
+button[type="button"],
+input[type="reset"] {
+  background-color: rgba(var(--color-highlight-rgb), 0.5);
+  color: var(--color-base);
+}
+
+button[type="reset"]:hover,
+button[type="button"]:hover,
+input[type="reset"]:hover {
+  filter: brightness(0.92);
+}
+
+/* ================================
+   8단계 (미션4): Flex & Grid 레이아웃
+   ================================ */
+
+nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+/* 바로가기 메뉴도 여행 카드처럼 마우스 올리면 반응 */
+nav ul li a {
+  display: block;
+  padding: 10px 16px;
+  background-color: rgba(var(--color-point-rgb), 0.15);
+  border: 2px solid var(--color-point);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(var(--color-base-rgb), 0.2);
+  background-color: rgba(var(--color-highlight-rgb), 0.6);
+  text-decoration: none;
+}
+
+.content-wrap {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.content-wrap main {
+  flex: 2;
+}
+
+.content-wrap aside {
+  flex: 1;
+}
+
+.content-wrap aside section {
+  background-color: rgba(var(--color-point-rgb), 0.15);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.trip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* section을 박스처리 */
+main section {
+  background-color: rgba(var(--color-point-rgb), 0.15);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+/* section 내용 스타일  */
+main section small {
+  display: block;
+  color: rgba(var(--color-base-rgb), 0.6);
+  font-size: 0.85em;
+  margin: 4px 0 12px;
+}
+
+main section p {
+  margin: 10px 0;
+}
+
+/* 들여쓰기 느낌 */
+main section p,
+main section small,
+main section ul,
+main section picture,
+main section figcaption,
+aside p {
+  padding-left: 40px;
+}
+
+/* ================================
+   9단계 (미션5): 반응형 웹 디자인
+   ================================ */
+
+@media (max-width: 786px) {
+
+  .content-wrap {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .trip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+}
+
+/* ================================
+   10단계 (미션6): 애니메이션
+   ================================ */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  animation: fadeInDown 1s ease;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+
+fieldset {
+  animation: fadeInUp 5s ease;
+}
+
+
+/* 휴일 카운팅 애니메이션 */
+#holiday-countdown {
+  font-size: 1.3em;
+  text-align: center;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    color: var(--color-base);
+  }
+  50% {
+    transform: scale(1.08);
+    color: var(--color-point);
+  }
+}
+
+/* ================================
+   11단계 게임 추가하기
+   ================================ */
+aside section button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  height: 40px;
+  padding: 0 12px;
+  margin-top: 8px;
+  margin-right: 8px;
+  background-color: rgba(var(--color-highlight-rgb), 0.3);
+  border: 2px solid var(--color-highlight);
+  border-radius: 12px;
+  font-family: 'Orbit', sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  color: var(--color-base);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+aside section button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(var(--color-base-rgb), 0.2);
+  background-color: rgba(var(--color-highlight-rgb), 0.6);
+}
+
+.game-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* 추가: 양 끝으로 정렬 */
+  gap: 3px;
+}
+
+.game-controls p {
+  margin: 0;
+}
+
+
+/* ================================
+   1２단계 실시간 날씨 추가하기
+   ================================ */
+
+
+/* 날씨 위젯 영역 */
+#city-select {
+  width: 100%;
+  padding: 8px 12px;
+  margin: 8px 0 12px;
+  border: 1px solid rgba(var(--color-point-rgb), 0.4);
+  border-radius: 6px;
+  background-color: #ffff;
+  color: var(--color-base);
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+#city-select:hover,
+#city-select:focus {
+  border-color: var(--color-point);
+  outline: none;
+}
+
+#weather-box {
+  margin-top: 10px;
+  padding: 16px;
+  border-left: 6px solid var(--color-point);
+  background-color: #fff5f5;
+  transition: background-color 0.3s ease;
+}
+
+#weather-box h4 {
+  margin: 0 0 8px;
+  color: var(--color-base);
+  font-size: 1.05em;
+  font-weight: bold;
+}
+
+#weather-box p {
+  margin: 4px 0;
+  font-size: 0.95em;
+  color: var(--color-base);
+}
+
+#weather-box p strong {
+  color: var(--color-point);
+}
+
+
+
+/* ================================
+   13단계: 다크모드
+   ================================ */
+
+/* 다크모드 색상 변수 재정의 */
+html[data-theme="dark"] {
+  --color-point: #ff8fb3;
+  --color-point-rgb: 255, 143, 179;
+
+  --color-highlight: #cfa6e0;
+  --color-highlight-rgb: 207, 166, 224;
+
+  --color-base: #f4eaff;
+  --color-base-rgb: 244, 234, 255;
+
+  --color-action: #8fb3ff;
+  --color-action-rgb: 143, 179, 255;
+}
+
+html[data-theme="dark"] body {
+  background-color: #14142b;
+}
+
+/* 하드코딩된 색상들 예외 처리 */
+html[data-theme="dark"] h1 {
+  color: var(--color-base);
+}
+
+html[data-theme="dark"] th {
+  background-color: #2a2a52;
+  color: var(--color-highlight);
+}
+
+html[data-theme="dark"] #city-select {
+  background-color: #1f1f3d;
+  color: var(--color-base);
+}
+
+html[data-theme="dark"] #weather-box {
+  background-color: rgba(var(--color-point-rgb), 0.08);
+}
+
+/* 다크모드 토글 버튼 */
+#dark-mode-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  padding: 8px 14px;
+  border: 2px solid var(--color-point);
+  border-radius: 20px;
+  background-color: rgba(var(--color-highlight-rgb), 0.3);
+  color: var(--color-base);
+  font-family: 'Orbit', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 999;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+  transform: translateY(-2px);
+  background-color: rgba(var(--color-highlight-rgb), 0.6);
+}
