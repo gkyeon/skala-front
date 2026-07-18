@@ -1,0 +1,67 @@
+<!-- 휴일 화면 -->
+    <!-- 내용 :  휴일에 뭐하는 지 일과-->
+    <!-- 스타일:  핑크 배경, 글씨 강조 사용 (b태그, mark태그), h3 스타일 부분 적용-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 휴일 일과</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- 다크모드 -->
+    <button id="dark-mode-toggle">🌙 다크 모드</button>
+
+        <!-- 이 페이지에서만 h3스타일 적용 -->
+    <style>
+    h3 {
+      color: var(--color-base);
+      font-weight: bold;
+      padding: 8px 16px;
+      border-left: 6px solid var(--color-point);
+      background-color: rgba(var(--color-point-rgb), 0.3);
+    }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+    <h1><b>🎉 나의 휴일 일과</b></h1>
+    <p><span style="font-style: italic; color: rgba(var(--color-base-rgb), 0.7);">📅 휴일 버전 작성일: 2026년 7월</span></p>
+    
+    <!-- 휴일 카운팅 -->
+    <h2 id="holiday-countdown"></h2>
+
+    <h3>🛏️ 주말 오전을 완벽하게 보내는 법</h3>
+    <p>09:00 - 😴 평일에 못 잔 늦잠 자기</p>
+    <p>10:00 - 🍜 주말 점심은 무조건 <b>면 요리</b></p>
+    <p>11:00 - 🏊‍♀️ 아침 수영 훈련, 자유형부터 <mark>평영</mark>까지</p>
+    <br>
+
+    <h3>🚶 오후 활동 </h3>
+    <p>13:00 - 📹 미뤄뒀던 유투브 시청</p>
+    <p>14:30 - ☕ 예쁜 카페 찾아가서 <mark>여유</mark> 즐기기</p>
+    <p>16:00 - 🎸 기타 연습하기</p>
+    <br>
+
+    <h3>🎬 저녁과 밤 </h3>
+    <p>18:00 - 🥘 <b>맛있는 저녁</b> 만들기</p>
+    <p>20:00 - 🎥 영화 감상 (좋아하는 영화)</p>
+    <p>23:00 - 📖 짧은 독서 후 힐링 타임 🛁</p>
+    <br>
+
+
+
+    </div>
+
+    <!-- 휴일 카운팅 -->
+    <script src="/script/holidayCountdown.js"></script>
+    <!-- 다크모드 -->
+    <script src="/script/darkMode.js"></script>
+</body>
+</html>

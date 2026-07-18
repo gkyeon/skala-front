@@ -1,0 +1,76 @@
+<!-- 프로필 화면 -->
+    <!-- 내용 : 프로필 소개, 리스트들 사용 -->
+    <!-- 스타일: h3 스타일 부분 적용  -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 프로필 페이지</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- 다크모드 -->
+    <button id="dark-mode-toggle">🌙 다크 모드</button>
+
+
+    <!-- 이 페이지에서만 h3스타일 적용 -->
+    <style>
+    h3 {
+      color: var(--color-base);
+      font-weight: bold;
+      padding: 8px 16px;
+      border-left: 6px solid var(--color-point);
+      background-color: rgba(var(--color-point-rgb), 0.3);
+    }
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+
+    <h1>👋 안녕하세요! 저를 소개합니다</h1>
+    <p>아래는 제가 좋아하는 것들과 올해의 계획, 그리고 저를 표현하는 단어들입니다.</p>
+
+    <!-- 1. 내가 좋아하는 음식(순서x) -->
+    <h3>❤️ 내가 좋아하는 것들</h3>
+    <ul>
+        <li>아이스 아메리카노☕와 크레이프 케이크🍰</li>
+        <li>에픽하이와 밴드음악들🎸 </li>
+        <li>취미들 - 수영 러닝 뜨개질 기타 공예 게임</li>
+    </ul>
+
+    <hr>
+
+    <!-- 2. 올 해 할 일(순서 o) -->
+    <h3>📅 올해 할 일</h3>
+    <ol>
+        <li>모든 수영 영법 마스터 하기 🏊‍♀️</li>
+        <li>러닝 200km 완성 🏃</li>
+        <li>개발자로 취뽀하기 💻</li>
+    </ol>
+
+
+
+    <hr>
+
+    <!-- 3. 나를 설명하는 단어들(정의형) -->
+    <h3>✨ 나를 설명하는 단어들</h3>
+    <dl>
+        <dt><b>🏃‍♂️ 취미</b></dt>
+        <dd>취미가 많아요. 새로운 걸 배우고 해보는 걸 좋아해요.</dd>
+        
+        <dt><b>🐶 강아지</b></dt>
+        <dd>강아지처럼 사람들을 좋아합니다. 사람들과 함께하는 시간이 즐거워요.</dd>
+    
+    </dl>
+
+    </div>
+        <!-- 다크모드 -->
+    <script src="/script/darkMode.js"></script>
+</body>
+</html>
