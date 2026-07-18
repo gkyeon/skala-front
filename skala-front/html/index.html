@@ -1,0 +1,135 @@
+<!-- 홈페이지 첫 화면 -->
+<!-- 내용 : 페이지 바로 가기 링크 / 오늘의 주요 소식 / 실시간 날씨/ 미니게임 / 부가정보-->
+<!-- 스타일 : 핑크배경, section 나눔, 마우스 오버/blink 등 애니메이션,   -->
+
+<!DOCTYPE html>
+<html lang='kor'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>하여니</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+        <!-- 게임추가 -->
+        <script src="/script/upDown.js"></script>
+        <script src="/script/grade.js"></script>
+        <script src="/script/bag.js"></script>
+        <!-- 날씨 불러오기 추가 -->
+        <script type="module" src="/script/realtimeinfo.js"></script>
+        <!-- 다크 모드 -->
+        <button id="dark-mode-toggle">🌙 다크 모드</button>
+
+    </head>
+    <body>
+        <div class="container">
+
+        <header>
+            <h1><b>하여니의 유니버스🚀</b></h1>
+            <p>저의 프로필, 학습 내용, 여행 기록을 모아둔 Hub 페이지입니다.</p>
+        </header>
+        <br>
+
+        <!-- nav : 다른 파일로 이동하는 메뉴 링크 -->
+        <nav>
+            <h3>🗂️ 바로가기 메뉴</h3>
+            <ul>
+                <li><a href="myProfile.html">소개(Profie)</a></li>
+                <li><a href="myClass.html">수업 시간표(Class)</a></li>
+                <li><a href="myHoliday.html">휴일 계획(Holiday)</a></li>
+                <li><a href="myTrip.html">여행 앨범(Album)</a></li>
+                <li><a href="signUp.html">회원가입(Sign Up)</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+        <!-- main : 본문 영역, 컨텐츠 -->
+        <div class = "content-wrap">
+        <main>
+            <section>
+            <h3>📌 오늘의 주요 소식</h3>
+            <p><b>최근 공지 및 업데이트</b></p>
+            <small>26.07.15 version</small>
+            <p><span style="color: #e3356f; animation: blink 1.2s infinite;">[업데이트]</span> 
+                <span style = "animation:blink 1.2s infinite;"">여행 앨범에 동영상 추가 완료!</span></p>
+            <p>일본 브이로그 영상을 추가했습니다.<br>추가로 풀버전을 감상하실 수 있는 유투브 링크를 걸어두었습니다.</p>
+            </section>
+
+            <section>
+            <h3>📸 이달의 베스트 컷</h3>
+            
+            <picture>
+            <img src="../media/skala입과.jpeg" alt="skala입과" width="360" height="240">
+            </picture>
+            <figcaption>SKALA 입과(2026)</figcaption>
+            </section>
+        </main>
+        <hr>
+
+        <!-- aside : 사이드바, 부가 정보 -->
+        <aside>
+            <section>
+                <h3>🌤️ 실시간 정보</h3>
+                <p>현재 위치 : 광주 광역시 광산구</p>
+                <div id="current-weather">
+                    <p>위치 정보를 확인하는 중... 📍</p>
+                </div>
+
+
+
+            <!-- 날씨 추가 -->
+                <h3>🌤️ 실시간 세계 날씨</h3>
+                <select id="city-select">
+                    <option value="none">도시를 선택하세요</option>
+                    <option value="37.56,126.97">대한민국 서울 🇰🇷</option>
+                    <option value="35.67,139.65">일본 도쿄 🇯🇵</option>
+                    <option value="48.85,2.35">프랑스 파리 🇫🇷</option>
+                    <option value="40.71,-74.01">미국 뉴욕 🇺🇸</option>
+                    <option value="51.51,-0.13">영국 런던 🇬🇧</option>
+                    <option value="-33.87,151.21">호주 시드니 🇦🇺</option>
+                    <option value="1.35,103.82">싱가포르 🇸🇬</option>
+                </select>
+                <div id="weather-box">
+                    <p>도시를 선택하면 좌표가 표시됩니다.</p>
+                </div>
+            </section>
+
+            <!-- 게임 추가 -->
+            
+            <section>
+                <h3>🎮 미니게임</h3>
+                <div class="game-controls">
+                <p>업다운 게임 하기</p>
+                <button onclick="startGame()"> ⬆️ ⬇️ </button>
+                </div>
+
+                <div class="game-controls">
+                <p>성적 계산하기</p>
+                <button onclick="checkGrade()"> 📚 🖍️ </button>
+                </div>
+    
+                <div class="game-controls">
+                <p>왓츠 인 마이 백</p>
+                <button onclick="showMyBag()"> 👜 🔍 </button>
+                </div>
+            </section>
+        
+        
+        
+        
+        
+        
+        </aside>
+        </div>
+        <footer>
+            <p>이메일 문의: gkdus6205@naver.com | 추천 학습 사이트: <a href="https://www.w3schools.com" target="_blank">W3Schools</a></p>
+            <p><small>© 2026 하연 포트폴리오. 모든 태그는 웹 표준 시맨틱 태그로 작성되었습니다.</small></p>
+        </footer>
+        </div>
+
+
+        <!-- 다크모드 -->
+        <script src="/script/darkMode.js"></script>
+    </body>
+</html>
