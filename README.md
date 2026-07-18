@@ -1,6 +1,7 @@
 # 🚀 하여니의 유니버스
 
 JavaScript 심화 과제 — DOM 조작, 비동기 통신, 모듈 분리를 활용한 개인 Hub 페이지
+🔗 [라이브 데모 바로가기](https://gkyeon.github.io/skala-front/html/index.html)
 
 ## 📌 프로젝트 소개
 
